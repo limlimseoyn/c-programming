@@ -1,25 +1,20 @@
 #include<stdio.h>
+#define_CRT_SECURE_NO_WARNINGS
 
-int main(void){
-	int number = 0;
-	
-	int i = 0;
-	int count = 0;
-	
-	printf("Please enter a number: ");
-	scanf("%d", &number);
-	
-	for(i = 1; i <= number; i ++){
-		if((number % i) == 0){
-			count ++;
+int main(void) {
+	for (int i = 0; i < 5;i++)
+	{
+		for (int k = 0; k < (5 - i) * 2 - 1; k++)
+		{
+			printf("*");
 		}
+
+		for (int j = 0; j < i; j++)
+		{
+			printf("");
+		}
+		printf("\n");
 	}
-	if(count == 2){
-		printf("It is a prime number.");
-	}
-	else{
-		printf("It is NOT a prime number.");
-	}
-	
 	return 0;
 }
+
